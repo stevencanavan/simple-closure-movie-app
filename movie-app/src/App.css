@@ -1,0 +1,35 @@
+.title {
+  text-align: center;
+}
+
+.movies {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 12px;
+  row-gap: 36px;
+  list-style: none;
+  padding: 0;
+}
+
+.movie {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.poster {
+  position: relative;
+}
+
+.poster:hover .overlay {
+  display: flex;
+  align-items: center;
+  padding: 24px;
+}
+
+.overlay {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.9);
+  color: #000;
+  inset: 0;
+  display: none;
+}
