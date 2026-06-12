@@ -10,7 +10,7 @@ interface Movie {
 
 const fetchMovies = async (): Promise<Movie[]> => {
   const response = await fetch(
-    `https://api.themoviedb.org/3/discover/movie?sort_by=vote_average.desc&api_key=${import.meta.env.VITE_MOVIE_API_KEY}`,
+    `https://api.themoviedb.org/3/discover/movie?with_genres=878&sort_by=vote_average.desc&api_key=${import.meta.env.VITE_MOVIE_API_KEY}`,
   );
   if (!response.ok) {
     throw new Error(`Movies request failed: ${response.status}`);
